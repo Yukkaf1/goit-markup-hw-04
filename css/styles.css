@@ -10,6 +10,7 @@
     --background-color: #2F303A;
     --background-color-secondary: #F5F4FA;
     --border-color: #ECECEC;
+    --icon-color: #AFB1B8;
 
     /* grid item*/
     --items: 1;
@@ -158,6 +159,8 @@ color: var(--accent-color);
     color: var(--accent-color);  
 }
 
+/*Блок header mailto + tel*/
+
 .address-nav .link
 {color: var(--secondary-text-color);
 font-weight: 500;
@@ -174,13 +177,26 @@ padding-bottom: 32px;;
 }
 
 .address-nav {
+  display: flex;
+  align-items: center;
   margin-left: auto;
 }
 
-.address-nav {
+.address-nav.list {
   display: flex;
   align-items: center;
+
 }
+
+.link.mailto:hover, 
+.link.tel:hover{
+  color: var(--accent-color);
+}
+
+.heder-icons {
+  fill: currentColor;
+  margin-right: 10px;
+  }
 
 /*Футер*/
 .page-footer {
@@ -322,10 +338,12 @@ font-size: 16px;
 
 .benefits.list {
   display: flex;
+  align-items: center;
 
   flex-wrap: wrap;
   /*margin: -15px;*/
   gap: var(--indent);
+  
 }
 
 /*
@@ -337,6 +355,7 @@ font-size: 16px;
 
   /*width: 270px;*/
   /*margin: 15px;*/
+
   --items: 4;
 }
 
@@ -352,6 +371,15 @@ font-size: 16px;
 .benefits.list p{
 color: var(--secondary-text-color);
 line-height: 1.7;
+}
+
+.benefits-icon {
+min-width: 100%;
+min-height: 120px ;
+
+padding: 25px 100px;
+margin-bottom: 30px;
+background-color: var(--background-color-secondary);
 }
 
 /*Секция услуги*/
@@ -411,6 +439,46 @@ margin-left: 30px;
   text-align: center;
 }
 
+
+/* social icon*/
+
+.socials.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px ;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  background-color: var(--background-color-secondary);
+ 
+  border-radius: 50%;
+}
+
+.socials-icon {
+  fill: var(--icon-color);
+}
+
+.socials-item:not(:last-child){
+margin-right: 10px;
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  background-color: var(--accent-color);
+}
+
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  fill: var(--primary-white-color);
+}
 /*Секция портфолио кнопки-фильтры !!!!!НЕ РАБОТАЕТ центрирование*/
 .filter.list {
   display: flex;
@@ -476,5 +544,100 @@ margin-left: 30px;
     background-color: var(--background-color-secondsry);
 }*/
 
+/*Секция постоянные клиенты*/
+
+  .clients.list h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+.clients.list {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.clients-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 170px;
+  height: 86px;
+
+  border: 1px solid var(--icon-color) ;
+  border-radius: 4%;
+}
+
+.clients .item:not(:last-child){
+  margin-right: 30px;
+}
+
+.clients-icon {
+  fill: var(--icon-color);
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon{
+  fill: var(--accent-color);
+}
+
+/*Секция присоединяйтесь*/
+
+.join.container {
+width: 206px;
+height: 80px;
+justify-content: center;
+align-items: center;
+}
+
+.join-title {
+  color: var(--primary-white-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.join.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px ;
+}
+
+.join-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  background-color: rgba(255, 255, 255, 0.1);
+ 
+  border-radius: 50%;
+}
+
+.join-item:not(:last-child){
+  margin-right: 10px;
+  }
 
 
+.join-icon {
+    fill: var(--primary-white-color);
+  }
+  
+
+.join-link:hover,
+.join-link:focus {
+    background-color: var(--accent-color);
+  }
+  
+.join-link:hover .join-icon,
+.join-link:focus .join-icon {
+    fill: var(--primary-white-color);
+  }

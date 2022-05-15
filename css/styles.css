@@ -200,9 +200,11 @@ padding-bottom: 32px;;
 
 /*Футер*/
 .page-footer {
+    
     background-color: var(--background-color);
     padding-top: 60px;
     padding-bottom: 60px;
+
     
 }
 .mailto-footer,
@@ -227,6 +229,11 @@ padding-bottom: 32px;;
 .mailto-footer :hover,
 .tel-footer :hover{
   color: var(--accent-color);
+}
+
+.footer.container {
+  display: flex;
+  
 }
 
 /*Секция Герой*/
@@ -587,11 +594,14 @@ margin-right: 10px;
 
 /*Секция присоединяйтесь*/
 
-.join.container {
+.join.box {
+
 width: 206px;
 height: 80px;
-justify-content: center;
-align-items: center;
+justify-content: left;
+margin-top: 12px;
+margin-left: 70px;
+
 }
 
 .join-title {
